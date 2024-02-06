@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
+class FriendsPage extends StatefulWidget {
+  @override
+  _FriendsPageState createState() => _FriendsPageState();
+}
+class _FriendsPageState extends State<FriendsPage>{
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
-        title: Text('My Friends'),
+        title: const Text('Friends'),
+        backgroundColor: Colors.green,
       ),
-      body: ListView(
-        children: const <Widget>[
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text('John Doe'),
-            subtitle: Text(' uhfuiwfiwf'
-            ),
-          ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text('Jane Doe'),
-            subtitle: Text('egrsgrhrwsh'
-            ),
-          ),
-        ],
+      body: const Center(
+        child: Text('Friends Page'),
       ),
-    ),
-
-  ));
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        backgroundColor: Colors.green,
+        child:
+         const Icon(Icons.add),
+      
+      ),
+    );
+  }
 }

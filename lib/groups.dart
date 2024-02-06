@@ -1,30 +1,34 @@
 import 'package:flutter/material.dart';
 
-class GroupsPage extends StatelessWidget {
+class GroupsPage extends StatefulWidget {
   @override
+  _GroupsPageState createState() => _GroupsPageState();
+}
+
+
+
+class _GroupsPageState extends State<GroupsPage> {
+  final List<String> entries = <String>['A', 'B', 'C'];
+  final List<int> colorCodes = <int>[600, 500, 100
+  ];
+
+@override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Go Dutch!'),
+        title: const Text('Groups'),
+        backgroundColor: Colors.blue[200],
       ),
       body: const Center(
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.people),
-            label: 'Groups',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Friends',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_balance_wallet),
-            label: 'Wallet',
-            )
-        ],
-      )
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        backgroundColor: Colors.blue[200],
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
+
